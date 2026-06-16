@@ -1,0 +1,25 @@
+{
+  "name": "bcrypt",
+  "version": "1.0.0",
+  "description": "A Node.js project demonstrating secure password hashing and verification using Bcrypt for authentication and user data protection.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/prthm45-kanha/BCRYPT.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/prthm45-kanha/BCRYPT/issues"
+  },
+  "homepage": "https://github.com/prthm45-kanha/BCRYPT#readme",
+  "dependencies": {
+    "bcrypt": "^6.0.0",
+    "jsonwebtoken": "^9.0.3"
+  }
+}
