@@ -3,10 +3,10 @@ const express=require('express');
 const app=express();
 
 app.use(cookieParser());
-
 const bcrypt=require('bcrypt');
 
-// hashing the password 
+// hashing the password  encryption
+// at a time only one will get executed either encryption or description
 app.get('/',(req,res)=>{
     bcrypt.genSalt(10, function(err, salt) {
     bcrypt.hash("tusii@22", salt, function(err, hash) {
@@ -16,23 +16,13 @@ app.get('/',(req,res)=>{
 });
 })
 
-// comparing the password
+// comparing the password decryption
 app.get('/',(req,res)=>{
     bcrypt.compare("tusii@22", "$2b$10$O5go6ESwgSZ1DniNlz76zeIfA/YiEFddkF57Y.Zm7SWPJZSFmEiwy", function(err, result) {
    console.log(result)
 });
 })
 
-// set up the cookie
-// app.get('/',(req,res)=>{
-//     res.cookie('name','Pratham Agrawal Bansal');
-//     res.send('done');
-// })
-// read the cookie
-// app.get('/read',(req,res)=>{
-//     console.log(req.cookies);
-//     res.send('read page');
-// })
 
 app.listen(3000,()=>{
     console.log('server running on port 3000');
